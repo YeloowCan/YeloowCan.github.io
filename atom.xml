@@ -37,25 +37,4 @@
     
   </entry>
   
-  <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2021/06/29/hello-world/"/>
-    <id>http://example.com/2021/06/29/hello-world/</id>
-    <published>2021-06-29T13:03:10.675Z</published>
-    <updated>2021-06-29T13:03:10.675Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
 </feed>
