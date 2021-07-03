@@ -464,15 +464,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一-创建github仓库"><a href="#一-创建github仓库" class="headerlink" title="一.创建github仓库"></a>一.创建github仓库</h1><ol>
+                <h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><h3 id="一-创建github仓库"><a href="#一-创建github仓库" class="headerlink" title="一.创建github仓库"></a>一.创建github仓库</h3><ol>
 <li><p>在github下新建一个仓库，名为<span style="color: red">你的用户名.github.io</span></p>
 </li>
-<li><p>配置ssh key，右键git bash here，分别执行如下命令<br>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”<br>生成ssh密钥文件</p>
-<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</p>
+<li><p>配置ssh key，右键git bash here，分别执行如下命令</p>
+<pre><code>git config --global user.name &quot;你的GitHub用户名&quot;
+git config --global user.email &quot;你的GitHub注册邮箱&quot;
+</code></pre>
+</li>
+<li><p>生成ssh密钥文件</p>
+<pre><code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;
+</code></pre>
 </li>
 </ol>
 <p>直接回车，在C:\Users\A.ssh(以自己的目录为准)下生成<span style="color: red">id_rsa.pub</span>密钥，打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key，将<span style="color: red">id_rsa.pub</span>密钥复制进去。</p>
-<h1 id="二-博客的安装与部署"><a href="#二-博客的安装与部署" class="headerlink" title="二.博客的安装与部署"></a>二.博客的安装与部署</h1><p>使用npm安装hexo:</p>
+<h3 id="二-博客的安装与部署"><a href="#二-博客的安装与部署" class="headerlink" title="二.博客的安装与部署"></a>二.博客的安装与部署</h3><p>使用npm安装hexo:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>初始化博客</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
@@ -493,10 +499,10 @@ hexo g
 hexo d
 </code></pre>
 <p>浏览器打开<a target="_blank" rel="noopener" href="https://yeloowcan.github.io/">yeloowcan.github.io</a>，可以访问到博客了</p>
-<h1 id="三-绑定域名"><a href="#三-绑定域名" class="headerlink" title="三.绑定域名"></a>三.绑定域名</h1><ol>
+<h3 id="三-绑定域名"><a href="#三-绑定域名" class="headerlink" title="三.绑定域名"></a>三.绑定域名</h3><ol>
 <li><p>可以在阿里云上购买的域名，我买的是<a target="_blank" rel="noopener" href="https://www.yellowcan.top/">yellowcan.top</a>，打开阿里云的域名控制台，添加一条A记录，记录值是ip地址（可以Ping仓库地址获取IP地址），再添加一条CNAME记录，记录值是博客地址，比如我的是：yeloowcan.github.io。</p>
 </li>
-<li><p>再本地博客目录source文件夹下新建一个CNAME文件<span style="color: red">（！！！一定要保存为所有文件，不能保存为txt文件，可以先新建文本文档后将后缀名直接删掉直接把文件）</span>，里面写进你的域名，我的是：<a target="_blank" rel="noopener" href="http://www.yellowcan.top./">www.yellowcan.top。</a></p>
+<li><p>再本地博客目录source文件夹下新建一个CNAME文件<span style="color: red">（！！！一定要保存为所有文件，不能保存为txt文件，可以先新建文本文档后将后缀名直接删掉直接把文件）</span>，里面写进你的域名，我的是：<a target="_blank" rel="noopener" href="http://www.yellowcan.top/">www.yellowcan.top</a></p>
 </li>
 <li><p>再顺序执行以下命令进行部署</p>
 <pre><code> hexo clean
@@ -507,7 +513,7 @@ hexo d
 <li><p>在浏览器里访问自己的域名，就可以访问到自己的博客啦。</p>
 </li>
 </ol>
-<h1 id="四-修改主题"><a href="#四-修改主题" class="headerlink" title="四.修改主题"></a>四.修改主题</h1><p>我用的是matery，在本地博客的theme文件下执行下面命令将主题下载下来：</p>
+<h3 id="四-修改主题"><a href="#四-修改主题" class="headerlink" title="四.修改主题"></a>四.修改主题</h3><p>我用的是matery，在本地博客的theme文件下执行下面命令将主题下载下来：</p>
 <pre><code>    git clone https://github.com/blinkfox/hexo-theme-matery.git
 </code></pre>
 <p>然后打开博客的_config.yml文件，将theme改为hexo-theme-matery</p>
@@ -520,8 +526,7 @@ hexo d
         hexo d
         
 </code></pre>
-<p>打开自己的域名，博客大功告成，我的博客地址：<a target="_blank" rel="noopener" href="http://yellowcan.top/">yellowcan.top</a>
-      </p>
+<p>打开自己的域名，博客大功告成，我的博客地址：<a target="_blank" rel="noopener" href="http://yellowcan.top/">yellowcan.top</a></p>
 
                 
             </div>
@@ -795,16 +800,16 @@ hexo d
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/30/%E8%AE%B0%E5%BD%95%E6%88%91%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B-1/">
+                <a href="/2021/06/29/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="记录我的Hexo博客搭建过程">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">记录我的Hexo博客搭建过程</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -815,7 +820,7 @@ hexo d
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-29
                             </span>
                         <span class="publish-author">
                             
@@ -825,7 +830,6 @@ hexo d
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
