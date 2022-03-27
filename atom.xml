@@ -6,7 +6,7 @@
   <link href="http://yellowcan.top/atom.xml" rel="self"/>
   
   <link href="http://yellowcan.top/"/>
-  <updated>2022-03-27T07:12:02.601Z</updated>
+  <updated>2022-03-27T12:02:47.325Z</updated>
   <id>http://yellowcan.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yellowcan.top/2022/03/27/typescript-xue-xi-ji-lu/"/>
     <id>http://yellowcan.top/2022/03/27/typescript-xue-xi-ji-lu/</id>
     <published>2022-03-27T07:06:00.000Z</published>
-    <updated>2022-03-27T07:12:02.601Z</updated>
+    <updated>2022-03-27T12:02:47.325Z</updated>
     
     
       
@@ -34,6 +34,10 @@
     
     
     
+    <category term="web" scheme="http://yellowcan.top/categories/web/"/>
+    
+    
+    <category term="typescript" scheme="http://yellowcan.top/tags/typescript/"/>
     
   </entry>
   
@@ -42,7 +46,7 @@
     <link href="http://yellowcan.top/2021/06/30/ji-lu-wo-de-hexo-bo-ke-da-jian-guo-cheng/"/>
     <id>http://yellowcan.top/2021/06/30/ji-lu-wo-de-hexo-bo-ke-da-jian-guo-cheng/</id>
     <published>2021-06-30T14:29:00.000Z</published>
-    <updated>2021-07-03T14:13:54.248Z</updated>
+    <updated>2022-03-27T12:02:51.225Z</updated>
     
     
       
@@ -55,6 +59,12 @@
     
     
     
+    <category term="blog" scheme="http://yellowcan.top/categories/blog/"/>
+    
+    
+    <category term="hexo" scheme="http://yellowcan.top/tags/hexo/"/>
+    
+    <category term="博客搭建" scheme="http://yellowcan.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   

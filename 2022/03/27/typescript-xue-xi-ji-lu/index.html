@@ -369,12 +369,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/typescript/">
+                                <span class="chip bg-color">typescript</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web/" class="post-category">
+                                web
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -397,7 +410,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    62
+                    159
                 </div>
                 
 
@@ -435,6 +448,27 @@ x <span class="token operator">=</span> <span class="token punctuation">[</span>
 </code></pre>
 <h3 id="任意值-any"><a href="#任意值-any" class="headerlink" title="任意值 any"></a>任意值 any</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">let</span> a<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token number">4</span>
 a <span class="token operator">=</span> <span class="token string">'huangping'</span>
+</code></pre>
+<h3 id="空值-void"><a href="#空值-void" class="headerlink" title="空值 void"></a>空值 void</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token function">voidFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'void'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="Null和Undefined"><a href="#Null和Undefined" class="headerlink" title="Null和Undefined"></a>Null和Undefined</h3><h3 id="Never"><a href="#Never" class="headerlink" title="Never"></a>Never</h3><h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">let</span> someValue<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token string">"this is a string"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> strLength<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">string</span><span class="token operator">></span>someValue<span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+or
+<span class="token keyword">let</span> strLength<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token operator">=</span> <span class="token punctuation">(</span>someValue as <span class="token keyword">string</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>用interface关键字定义一个接口</p>
+<ul>
+<li>当接属性可选时，可在属性名字定义后面加上一个<code>?</code>符号</li>
+<li>只读属性，可在属性名前用readonly来指定</li>
+</ul>
+<pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">interface</span> <span class="token class-name">person</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+    age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+    address<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+    readonly sex<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 
                 
@@ -499,7 +533,11 @@ a <span class="token operator">=</span> <span class="token string">'huangping'</
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/typescript/">
+                                    <span class="chip bg-color">typescript</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -695,13 +733,25 @@ a <span class="token operator">=</span> <span class="token string">'huangping'</
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            黄罐头
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web/" class="post-category">
+                                    web
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/typescript/">
+                        <span class="chip bg-color">typescript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -733,11 +783,27 @@ a <span class="token operator">=</span> <span class="token string">'huangping'</
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            黄罐头
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">博客搭建</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -940,7 +1006,7 @@ a <span class="token operator">=</span> <span class="token string">'huangping'</
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">655</span>
+                        class="white-color">752</span>
             
             
             
