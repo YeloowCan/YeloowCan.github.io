@@ -5,6 +5,31 @@
     
     <entry>
       <title>TypeScript学习记录</title>
+      <link href="/2022/05/02/xi-shu-shu-zu-yu-mi-ji-shu-zu/"/>
+      <url>/2022/05/02/xi-shu-shu-zu-yu-mi-ji-shu-zu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    在工作中，经常会遇到这种情况，想要获得内容为数字1-10的数组，使用以下方法确等不到相应的结果</p><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> </code></pre><p>​    这是为什么呢，这就引出以下这个概念<strong>稀疏数组</strong></p><h2 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h2><p>​    什么是稀疏数组呢？顾名思义，就是不连续的数组，数组元素之间存在间隙。上面生成数字的代码结果如下，会发现是10个empty。</p><p><img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20220502222003725.png" alt="image-20220502222003725"></p><p>​    实际上，<code>new Array(10)</code>生成的就是稀疏数组，数组中没有相应的索引，阅读数组map方法的源码可以发现，该方法是按照数组的索引去遍历的，</p><p><img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20220502223057368.png" alt="image-20220502223057368"></p><p>​    在控制台中敲入如下代码，我们发现索引值不存在与数组arr中，所以调用执行最上面的代码时无法获得想要获得的结果。</p><h2 id="密集数组"><a href="#密集数组" class="headerlink" title="密集数组"></a>密集数组</h2><p>​    与稀疏数组相对应的，就是<strong>密集数组</strong>，所谓密集数组，就是占据连续内存空间，数组元素间不存在间隙。</p><p>​    回到开头，我们想要获得内容为1-10的密集数组，可以使用以下方法：</p><ol><li><p> <code>let arr = new Array(10).fill(0).map((_, i) =&gt; i + 1)</code></p></li><li><p> <code>let arr = Array.from({ length: 10 }, (_, i) =&gt; i + 1)</code></p></li><li><p> <code>  let arr = Array.apply(null, Array(10)).map((_, i) =&gt; i + 1)</code></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>TypeScript学习记录</title>
       <link href="/2022/03/27/typescript-xue-xi-ji-lu/"/>
       <url>/2022/03/27/typescript-xue-xi-ji-lu/</url>
       

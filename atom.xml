@@ -6,7 +6,7 @@
   <link href="http://yellowcan.top/atom.xml" rel="self"/>
   
   <link href="http://yellowcan.top/"/>
-  <updated>2022-03-27T12:02:47.325Z</updated>
+  <updated>2022-05-02T14:42:47.891Z</updated>
   <id>http://yellowcan.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TypeScript学习记录</title>
+    <link href="http://yellowcan.top/2022/05/02/xi-shu-shu-zu-yu-mi-ji-shu-zu/"/>
+    <id>http://yellowcan.top/2022/05/02/xi-shu-shu-zu-yu-mi-ji-shu-zu/</id>
+    <published>2022-05-02T14:13:00.000Z</published>
+    <updated>2022-05-02T14:42:47.891Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;​    在工作中，经常会遇到这种情况，想要获得内容为数字1-10的数组，使用以下方法确等不到相应的结果&lt;/p&gt;
+&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://yellowcan.top/categories/web/"/>
+    
+    
+    <category term="javascript" scheme="http://yellowcan.top/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>TypeScript学习记录</title>

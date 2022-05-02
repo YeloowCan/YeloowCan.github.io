@@ -371,8 +371,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/typescript/">
-                                <span class="chip bg-color">typescript</span>
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
                             </a>
                         
                     </div>
@@ -396,21 +396,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-27
+                    2022-05-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-27
+                    2022-05-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    159
+                    341
                 </div>
                 
 
@@ -432,44 +432,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="基础类型"><a href="#基础类型" class="headerlink" title="基础类型"></a>基础类型</h2><h3 id="数字-number"><a href="#数字-number" class="headerlink" title="数字 number"></a>数字 number</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">const</span> level<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token operator">=</span> <span class="token number">6</span>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    在工作中，经常会遇到这种情况，想要获得内容为数字1-10的数组，使用以下方法确等不到相应的结果</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> 
 </code></pre>
-<h3 id="字符串-string"><a href="#字符串-string" class="headerlink" title="字符串 string"></a>字符串 string</h3><pre class=" language-typescript"><code class="language-typescript">cosnt name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">:</span> <span class="token string">"huangping"</span>
-</code></pre>
-<h3 id="布尔值-boolean"><a href="#布尔值-boolean" class="headerlink" title="布尔值 boolean"></a>布尔值 boolean</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">const</span> isBoy<span class="token punctuation">:</span> <span class="token keyword">boolean</span> <span class="token operator">=</span> <span class="token keyword">true</span>
-</code></pre>
-<h3 id="数组-array"><a href="#数组-array" class="headerlink" title="数组 array"></a>数组 array</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">const</span> list<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
-</code></pre>
-<h3 id="元组-Tuple"><a href="#元组-Tuple" class="headerlink" title="元组 Tuple"></a>元组 Tuple</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">let</span> x<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token keyword">string</span><span class="token punctuation">,</span> <span class="token keyword">number</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'hello'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span>
-</code></pre>
-<h3 id="枚举-enum"><a href="#枚举-enum" class="headerlink" title="枚举 enum"></a>枚举 enum</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">enum</span> Color <span class="token punctuation">{</span> Red<span class="token punctuation">,</span> Green<span class="token punctuation">,</span> Yellow <span class="token punctuation">}</span>
-<span class="token keyword">let</span> c<span class="token punctuation">:</span> Color <span class="token operator">=</span> Color<span class="token punctuation">.</span>Green<span class="token punctuation">;</span>
-</code></pre>
-<h3 id="任意值-any"><a href="#任意值-any" class="headerlink" title="任意值 any"></a>任意值 any</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">let</span> a<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token number">4</span>
-a <span class="token operator">=</span> <span class="token string">'huangping'</span>
-</code></pre>
-<h3 id="空值-void"><a href="#空值-void" class="headerlink" title="空值 void"></a>空值 void</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token function">voidFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'void'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h3 id="Null和Undefined"><a href="#Null和Undefined" class="headerlink" title="Null和Undefined"></a>Null和Undefined</h3><h3 id="Never"><a href="#Never" class="headerlink" title="Never"></a>Never</h3><h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">let</span> someValue<span class="token punctuation">:</span> <span class="token keyword">any</span> <span class="token operator">=</span> <span class="token string">"this is a string"</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> strLength<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">string</span><span class="token operator">></span>someValue<span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-or
-<span class="token keyword">let</span> strLength<span class="token punctuation">:</span> <span class="token keyword">number</span> <span class="token operator">=</span> <span class="token punctuation">(</span>someValue as <span class="token keyword">string</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-</code></pre>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>用interface关键字定义一个接口</p>
-<ul>
-<li>当接属性可选时，可在属性名字定义后面加上一个<code>?</code>符号</li>
-<li>只读属性，可在属性名前用readonly来指定</li>
-</ul>
-<pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">interface</span> <span class="token class-name">person</span> <span class="token punctuation">{</span>
-    name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
-    age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
-    address<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
-    readonly sex<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<p>​    这是为什么呢，这就引出以下这个概念<strong>稀疏数组</strong></p>
+<h2 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h2><p>​    什么是稀疏数组呢？顾名思义，就是不连续的数组，数组元素之间存在间隙。上面生成数字的代码结果如下，会发现是10个empty。</p>
+<p><img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20220502222003725.png" alt="image-20220502222003725"></p>
+<p>​    实际上，<code>new Array(10)</code>生成的就是稀疏数组，数组中没有相应的索引，阅读数组map方法的源码可以发现，该方法是按照数组的索引去遍历的，</p>
+<p><img src="C:\Users\A\AppData\Roaming\Typora\typora-user-images\image-20220502223057368.png" alt="image-20220502223057368"></p>
+<p>​    在控制台中敲入如下代码，我们发现索引值不存在与数组arr中，所以调用执行最上面的代码时无法获得想要获得的结果。</p>
+<h2 id="密集数组"><a href="#密集数组" class="headerlink" title="密集数组"></a>密集数组</h2><p>​    与稀疏数组相对应的，就是<strong>密集数组</strong>，所谓密集数组，就是占据连续内存空间，数组元素间不存在间隙。</p>
+<p>​    回到开头，我们想要获得内容为1-10的密集数组，可以使用以下方法：</p>
+<ol>
+<li><p> <code>let arr = new Array(10).fill(0).map((_, i) =&gt; i + 1)</code></p>
+</li>
+<li><p> <code>let arr = Array.from({ length: 10 }, (_, i) =&gt; i + 1)</code></p>
+</li>
+<li><p> <code>  let arr = Array.apply(null, Array(10)).map((_, i) =&gt; i + 1)</code></p>
+</li>
+</ol>
 
                 
             </div>
@@ -496,7 +477,7 @@ or
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yellowcan.top/2022/03/27/typescript-xue-xi-ji-lu/">http://yellowcan.top/2022/03/27/typescript-xue-xi-ji-lu/</a>
+                    <a href="http://yellowcan.top/2022/05/02/xi-shu-shu-zu-yu-mi-ji-shu-zu/">http://yellowcan.top/2022/05/02/xi-shu-shu-zu-yu-mi-ji-shu-zu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -534,8 +515,8 @@ or
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/typescript/">
-                                    <span class="chip bg-color">typescript</span>
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
                                 </a>
                             
                         </div>
@@ -707,9 +688,10 @@ or
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/05/02/xi-shu-shu-zu-yu-mi-ji-shu-zu/">
                     <div class="card-image">
@@ -727,9 +709,9 @@ or
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -742,6 +724,7 @@ or
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -760,13 +743,13 @@ or
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/30/ji-lu-wo-de-hexo-bo-ke-da-jian-guo-cheng/">
+                <a href="/2022/03/27/typescript-xue-xi-ji-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="记录我的Hexo博客搭建过程">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="TypeScript学习记录">
                         
-                        <span class="card-title">记录我的Hexo博客搭建过程</span>
+                        <span class="card-title">TypeScript学习记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -777,14 +760,14 @@ or
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/blog/" class="post-category">
-                                    blog
+                            <a href="/categories/web/" class="post-category">
+                                    web
                                 </a>
                             
                             
@@ -794,12 +777,8 @@ or
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
+                    <a href="/tags/typescript/">
+                        <span class="chip bg-color">typescript</span>
                     </a>
                     
                 </div>
