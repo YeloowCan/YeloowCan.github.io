@@ -407,7 +407,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-03
+                    2023-04-22
                 </div>
                 
 
@@ -441,9 +441,9 @@
 </code></pre>
 <p>​    这是为什么呢，这就引出以下这个概念<em><strong>稀疏数组</strong></em></p>
 <h2 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h2><p>​    什么是稀疏数组呢？顾名思义，就是不连续的数组，数组元素之间存在间隙。上面生成数字的代码结果如下，会发现是10个empty。</p>
-<p><img src="/.top//..%5Cimages%5Cimage-20220502222003725.png" alt="图1"></p>
+<p><img src="/images/image-20220502222003725.png" alt="图1"></p>
 <p>​    实际上，<code>new Array(10)</code>生成的就是稀疏数组，数组中没有相应的索引，阅读数组map方法的源码可以发现，该方法是按照数组的索引去遍历的，</p>
-<p><img src="/.top//..%5Cimages%5Cimage-20220502223057368.png" alt="图2"></p>
+<p><img src="/images/image-20220502223057368.png" alt="图2"></p>
 <p>​    在控制台中敲入如下代码，我们发现索引值不存在与数组arr中，所以调用执行最上面的代码时无法获得想要获得的结果。</p>
 <h2 id="密集数组"><a href="#密集数组" class="headerlink" title="密集数组"></a>密集数组</h2><p>​    与稀疏数组相对应的，就是<em><strong>密集数组</strong></em>，所谓密集数组，就是占据连续内存空间，数组元素间不存在间隙。</p>
 <p>​    回到开头，我们想要获得内容为1-10的密集数组，可以使用以下方法：</p>
