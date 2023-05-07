@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yellowcan.top/images/react.jpeg">
 <meta property="article:published_time" content="2023-05-07T13:04:18.000Z">
-<meta property="article:modified_time" content="2023-05-07T13:41:22.151Z">
+<meta property="article:modified_time" content="2023-05-07T13:45:17.264Z">
 <meta property="article:author" content="黄罐头">
 <meta property="article:tag" content="react">
 <meta name="twitter:card" content="summary_large_image">
@@ -281,23 +281,23 @@
               <div class="markdown-body">
                 
                 <h2 id="Render-Api"><a href="#Render-Api" class="headerlink" title="Render Api"></a>Render Api</h2><p>为了更好的管理<code>root节点</code>，<code>React 18</code> 引入了一个新的 <code>root API</code>，新的 <code>root API</code> 还支持 <code>new concurrent renderer</code>（并发模式的渲染），它允许你进入<code>concurrent mode</code>（并发模式）。</p>
-<pre class=" language-react"><code class="language-react">// React 17
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// React 17</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
 
-const root = document.getElementById('root')!;
+<span class="token keyword">const</span> root <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span>
 
-ReactDOM.render(<App />, root);
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span> root<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// React 18
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+<span class="token comment" spellcheck="true">// React 18</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom/client'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
 
-const root = document.getElementById('root')!;
+<span class="token keyword">const</span> root <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span>
 
-ReactDOM.createRoot(root).render(<App />);
+ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span> <span class="token punctuation">/></span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="setState-批处理"><a href="#setState-批处理" class="headerlink" title="setState 批处理"></a>setState 批处理</h2><p>在React18之前，只有在<strong>React事件处理函数</strong>中会进行批处理更新</p>
 <p>以下代码在18及18之前的版本，都只会打印一次render</p>
