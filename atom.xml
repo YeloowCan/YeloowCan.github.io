@@ -6,7 +6,7 @@
   <link href="http://yellowcan.top/atom.xml" rel="self"/>
   
   <link href="http://yellowcan.top/"/>
-  <updated>2023-05-07T07:37:24.072Z</updated>
+  <updated>2023-05-07T13:41:22.151Z</updated>
   <id>http://yellowcan.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React18新特性</title>
+    <link href="http://yellowcan.top/2023/05/07/react18-xin-te-xing/"/>
+    <id>http://yellowcan.top/2023/05/07/react18-xin-te-xing/</id>
+    <published>2023-05-07T13:04:18.000Z</published>
+    <updated>2023-05-07T13:41:22.151Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Render-Api&quot;&gt;&lt;a href=&quot;#Render-Api&quot; class=&quot;headerlink&quot; title=&quot;Render Api&quot;&gt;&lt;/a&gt;Render</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://yellowcan.top/categories/web/"/>
+    
+    
+    <category term="react" scheme="http://yellowcan.top/tags/react/"/>
+    
+  </entry>
   
   <entry>
     <title>Vercel部署流程</title>
