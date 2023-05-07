@@ -16,12 +16,12 @@
   <meta name="author" content="黄罐头">
   <meta name="keywords" content="">
   
-    <meta name="description" content="infer在条件类型中申明泛型，使用infer关键字 有以下两个限制：  只能在条件类型的extends子句中使用 infer得到的类型只能在true语句中使用  申明一个条件类型Element，获取数组中元素的类型： 12type ElementType&lt;T&gt; &#x3D; T extends unknown[] ? T[number] : Ttype A &#x3D; ElementType&lt;n">
+    <meta name="description" content="infer在条件类型中申明泛型，使用infer关键字 有以下两个限制：  只能在条件类型的extends子句中使用 infer得到的类型只能在true语句中使用  申明一个条件类型Element，获取数组中元素的类型： type ElementType&lt;T&gt; &#x3D; T extends unknown[] ? T[number] : T type A &#x3D; ElementType&lt;numbe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TS-infer关键字">
 <meta property="og:url" content="http://yellowcan.top/2023/04/13/ts-infer/index.html">
 <meta property="og:site_name" content="黄罐头的博客">
-<meta property="og:description" content="infer在条件类型中申明泛型，使用infer关键字 有以下两个限制：  只能在条件类型的extends子句中使用 infer得到的类型只能在true语句中使用  申明一个条件类型Element，获取数组中元素的类型： 12type ElementType&lt;T&gt; &#x3D; T extends unknown[] ? T[number] : Ttype A &#x3D; ElementType&lt;n">
+<meta property="og:description" content="infer在条件类型中申明泛型，使用infer关键字 有以下两个限制：  只能在条件类型的extends子句中使用 infer得到的类型只能在true语句中使用  申明一个条件类型Element，获取数组中元素的类型： type ElementType&lt;T&gt; &#x3D; T extends unknown[] ? T[number] : T type A &#x3D; ElementType&lt;numbe">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yellowcan.top/images/infer.png">
 <meta property="article:published_time" content="2023-04-13T14:30:58.000Z">
@@ -61,11 +61,6 @@
 
 <link  rel="stylesheet" href="/css/main.css" />
 
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
 
 
 
@@ -231,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          855 字
+          492 字
         
       </span>
     
@@ -242,7 +237,7 @@
         
         
         
-          8 分钟
+          5 分钟
         
       </span>
     
@@ -292,19 +287,25 @@
 <li>infer得到的类型只能在true语句中使用</li>
 </ol>
 <p>申明一个条件类型Element，获取数组中元素的类型：</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs typescript"><span class="hljs-keyword">type</span> ElementType&lt;T&gt; = T <span class="hljs-keyword">extends</span> unknown[] ? T[<span class="hljs-built_in">number</span>] : T<br><span class="hljs-keyword">type</span> A = ElementType&lt;<span class="hljs-built_in">number</span>[]&gt; <span class="hljs-comment"><code class="language-hljs typescript"><span class="hljs-keyword">type</span> ElementType&lt;T&gt; = T <span class="hljs-keyword">extends</span> unknown[] ? T[<span class="hljs-built_in">number</span>] : T<br><span class="hljs-keyword">type</span> A = ElementType&lt;<span class="hljs-built_in">number</span>[]&gt; <span class="hljs-comment">// number</span><br></code></pre></td></tr></tbody></table></figure>
-
+<pre class=" language-typescript"><code class="language-typescript">type ElementType<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token class-name">unknown</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">?</span> T<span class="token punctuation">[</span><span class="token keyword">number</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> T
+type A <span class="token operator">=</span> ElementType<span class="token operator">&lt;</span><span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> <span class="token comment" spellcheck="true">// number</span>
+</code></pre>
 <p>使用infer关键字重写：</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs typescript"><span class="hljs-keyword">type</span> ElementType2&lt;T&gt; = T <span class="hljs-keyword">extends</span> (infer U)[] ? U : T<br><span class="hljs-keyword">type</span> B = ElementType2&lt;<span class="hljs-built_in">number</span>[]&gt; <span class="hljs-comment"><code class="language-hljs typescript"><span class="hljs-keyword">type</span> ElementType2&lt;T&gt; = T <span class="hljs-keyword">extends</span> (infer U)[] ? U : T<br><span class="hljs-keyword">type</span> B = ElementType2&lt;<span class="hljs-built_in">number</span>[]&gt; <span class="hljs-comment">// number</span><br></code></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre class=" language-hljs typescript"><span class="hljs-keyword">type</span> Replace&lt;<br>  S <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span>,<br>  From <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span>,<br>  To <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span><br>&gt; = From <span class="hljs-keyword">extends</span> <span class="hljs-string">''</span><br>  ? S<br>  : S <span class="hljs-keyword">extends</span> <span class="hljs-string">`<span class="hljs-subst">${infer A}</span><span class="hljs-subst">${From}</span><span class="hljs-subst">${infer B}</span>`</span><br>  ? <span class="hljs-string">`<span class="hljs-subst">${A}</span><span class="hljs-subst">${To}</span><span class="hljs-subst"><code class="language-hljs typescript"><span class="hljs-keyword">type</span> Replace&lt;<br>  S <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span>,<br>  From <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span>,<br>  To <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span><br>&gt; = From <span class="hljs-keyword">extends</span> <span class="hljs-string">''</span><br>  ? S<br>  : S <span class="hljs-keyword">extends</span> <span class="hljs-string">`<span class="hljs-subst">${infer A}</span><span class="hljs-subst">${From}</span><span class="hljs-subst">${infer B}</span>`</span><br>  ? <span class="hljs-string">`<span class="hljs-subst">${A}</span><span class="hljs-subst">${To}</span><span class="hljs-subst">${B}</span>`</span><br>  : S;<br><br></code></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs typescript"><span class="hljs-keyword">type</span> Pop&lt;T <span class="hljs-keyword">extends</span> <span class="hljs-built_in">any</span>[]&gt; = T <span class="hljs-keyword"><code class="language-hljs typescript"><span class="hljs-keyword">type</span> Pop&lt;T <span class="hljs-keyword">extends</span> <span class="hljs-built_in">any</span>[]&gt; = T <span class="hljs-keyword">extends</span> [...infer I, infer _] ? I : [];<br></code></pre></td></tr></tbody></table></figure>
-
+<pre class=" language-typescript"><code class="language-typescript">type ElementType2<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token punctuation">(</span>infer U<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">?</span> U <span class="token punctuation">:</span> T
+type B <span class="token operator">=</span> ElementType2<span class="token operator">&lt;</span><span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> <span class="token comment" spellcheck="true">// number</span>
+</code></pre>
+<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><pre class=" language-typescript"><code class="language-typescript">type Replace<span class="token operator">&lt;</span>
+  S <span class="token keyword">extends</span> <span class="token class-name">string</span><span class="token punctuation">,</span>
+  From <span class="token keyword">extends</span> <span class="token class-name">string</span><span class="token punctuation">,</span>
+  To <span class="token keyword">extends</span> <span class="token class-name">string</span>
+<span class="token operator">></span> <span class="token operator">=</span> From <span class="token keyword">extends</span> <span class="token string">''</span>
+  <span class="token operator">?</span> S
+  <span class="token punctuation">:</span> S <span class="token keyword">extends</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>infer A<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>From<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>infer B<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
+  <span class="token operator">?</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>A<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>To<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>B<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
+  <span class="token punctuation">:</span> S<span class="token punctuation">;</span>
+</code></pre>
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><pre class=" language-typescript"><code class="language-typescript">type Pop<span class="token operator">&lt;</span>T <span class="token keyword">extends</span> <span class="token class-name">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token punctuation">[</span><span class="token operator">...</span>infer I<span class="token punctuation">,</span> infer _<span class="token punctuation">]</span> <span class="token operator">?</span> I <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
 
                 
               </div>
@@ -444,9 +445,6 @@
 
 
 
-
-
-  
 
 
 
@@ -686,6 +684,10 @@
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
+
+
+  
+<script src="/js/codeBLang.js"></script>
 
 
 

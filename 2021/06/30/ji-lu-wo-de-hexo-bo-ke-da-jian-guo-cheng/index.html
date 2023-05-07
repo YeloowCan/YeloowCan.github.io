@@ -63,11 +63,6 @@
 <link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
 
 
   
@@ -290,33 +285,37 @@
 <li><p>在github下新建一个仓库，名为<span style="color: red">你的用户名.github.io</span></p>
 </li>
 <li><p>配置ssh key，右键git bash here，分别执行如下命令</p>
-<pre><code class="hljs">git config --global user.name "你的GitHub用户名"
+<pre><code>git config --global user.name "你的GitHub用户名"
 git config --global user.email "你的GitHub注册邮箱"
 </code></pre>
 </li>
 <li><p>生成ssh密钥文件</p>
-<pre><code class="hljs">ssh-keygen -t rsa -C "你的GitHub注册邮箱"
+<pre><code>ssh-keygen -t rsa -C "你的GitHub注册邮箱"
 </code></pre>
 </li>
 </ol>
 <p>直接回车，在C:\Users\A.ssh(以自己的目录为准)下生成<span style="color: red">id_rsa.pub</span>密钥，打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key，将<span style="color: red">id_rsa.pub</span>密钥复制进去。</p>
 <h3 id="二-博客的安装与部署"><a href="#二-博客的安装与部署" class="headerlink" title="二.博客的安装与部署"></a>二.博客的安装与部署</h3><p>使用npm安装hexo:</p>
-<figure class="highlight avrasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs avrasm">npm install -g hexo-<span class="hljs-keyword"><code class="language-hljs avrasm">npm install -g hexo-<span class="hljs-keyword">cli</span><br><br></code></pre></td></tr></tbody></table></figure>
+<pre><code>npm install -g hexo-cli
+</code></pre>
 <p>初始化博客</p>
-<figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs csharp">hexo <span class="hljs-keyword"><code class="language-hljs csharp">hexo <span class="hljs-keyword">init</span> blog<br></code></pre></td></tr></tbody></table></figure>
+<pre><code>hexo init blog
+</code></pre>
 <p>在blog目录下执行下面命令启动博客查看是否初始化成功，执行完可在<a target="_blank" rel="noopener" href="http://localhost:4000/">localhost:4000</a>下查看</p>
-<figure class="highlight ebnf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs ebnf"><span class="hljs-attribute">hexo g</span><br><span class="hljs-attribute"><code class="language-hljs ebnf"><span class="hljs-attribute">hexo g</span><br><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></tbody></table></figure>
+<pre><code>hexo g
+hexo s
+</code></pre>
 <p>打开blog目录下得_config.yml文件，与github关联起来，滚到最后，修改为(repo填自己的仓库)：</p>
-<pre><code class="hljs">deploy:
+<pre><code>deploy:
 type: git
 repo: https://github.com/YeloowCan/YeloowCan.github.io
 branch: master
 </code></pre>
 <p>安装git部署插件</p>
-<pre><code class="hljs">npm install hexo-deployer-git --save
+<pre><code>npm install hexo-deployer-git --save
 </code></pre>
 <p>按顺序执行以下命令进行部署</p>
-<pre><code class="hljs">hexo clean
+<pre><code>hexo clean
 hexo g
 hexo d
 </code></pre>
@@ -327,7 +326,7 @@ hexo d
 <li><p>再本地博客目录source文件夹下新建一个CNAME文件<span style="color: red">（！！！一定要保存为所有文件，不能保存为txt文件，可以先新建文本文档后将后缀名直接删掉直接把文件）</span>，里面写进你的域名，我的是：<a target="_blank" rel="noopener" href="http://www.yellowcan.top/">www.yellowcan.top</a></p>
 </li>
 <li><p>再顺序执行以下命令进行部署</p>
-<pre><code class="hljs"> hexo clean
+<pre><code> hexo clean
  hexo g
  hexo d
 </code></pre>
@@ -336,13 +335,13 @@ hexo d
 </li>
 </ol>
 <h3 id="四-修改主题"><a href="#四-修改主题" class="headerlink" title="四.修改主题"></a>四.修改主题</h3><p>我用的是matery，在本地博客的theme文件下执行下面命令将主题下载下来：</p>
-<pre><code class="hljs">    git clone https://github.com/blinkfox/hexo-theme-matery.git
+<pre><code>    git clone https://github.com/blinkfox/hexo-theme-matery.git
 </code></pre>
 <p>然后打开博客的_config.yml文件，将theme改为hexo-theme-matery</p>
-<pre><code class="hljs">        theme: hexo-theme-matery
+<pre><code>        theme: hexo-theme-matery
 </code></pre>
 <p>最后再执行下面命令部署一下，就可以啦</p>
-<pre><code class="hljs">        hexo clean
+<pre><code>        hexo clean
         hexo g
         hexo d
 </code></pre>
@@ -482,9 +481,6 @@ hexo d
 
 
 
-
-
-  
 
 
 
@@ -724,6 +720,10 @@ hexo d
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
+
+
+  
+<script src="/js/codeBLang.js"></script>
 
 
 
