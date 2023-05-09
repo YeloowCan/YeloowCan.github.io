@@ -16,26 +16,26 @@
   <meta name="author" content="黄罐头">
   <meta name="keywords" content="">
   
-    <meta name="description" content="infer在条件类型中申明泛型，使用infer关键字 有以下两个限制：  只能在条件类型的extends子句中使用 infer得到的类型只能在true语句中使用  申明一个条件类型Element，获取数组中元素的类型： type ElementType&lt;T&gt; &#x3D; T extends unknown[] ? T[number] : T type A &#x3D; ElementType&lt;numbe">
+    <meta name="description" content="打个响指吧，他说 我们打个共鸣的响指 遥远的事物将被震碎 面前的人们此时尚不知情 吹个口哨吧，我说 你来吹个斜斜的口哨 像一块铁然后是一枚针 磁极的弧线拂过绿玻璃 喝一杯水吧，也看一看河 在平静时平静，不平静时 我们就错过了一层台阶 一小颗眼泪滴在石头上 很长时间也不会干涸 整个季节将它结成了琥珀 块状的流淌，具体的光芒 在它身后是些遥远的事物">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TS-infer关键字">
-<meta property="og:url" content="http://yellowcan.top/2023/04/13/ts-infer/index.html">
+<meta property="og:title" content="漫长的">
+<meta property="og:url" content="http://yellowcan.top/2023/05/09/man-chang-de/index.html">
 <meta property="og:site_name" content="黄罐头的博客">
-<meta property="og:description" content="infer在条件类型中申明泛型，使用infer关键字 有以下两个限制：  只能在条件类型的extends子句中使用 infer得到的类型只能在true语句中使用  申明一个条件类型Element，获取数组中元素的类型： type ElementType&lt;T&gt; &#x3D; T extends unknown[] ? T[number] : T type A &#x3D; ElementType&lt;numbe">
+<meta property="og:description" content="打个响指吧，他说 我们打个共鸣的响指 遥远的事物将被震碎 面前的人们此时尚不知情 吹个口哨吧，我说 你来吹个斜斜的口哨 像一块铁然后是一枚针 磁极的弧线拂过绿玻璃 喝一杯水吧，也看一看河 在平静时平静，不平静时 我们就错过了一层台阶 一小颗眼泪滴在石头上 很长时间也不会干涸 整个季节将它结成了琥珀 块状的流淌，具体的光芒 在它身后是些遥远的事物">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yellowcan.top/images/infer.png">
-<meta property="article:published_time" content="2023-04-13T14:30:58.000Z">
-<meta property="article:modified_time" content="2023-05-07T07:36:13.159Z">
+<meta property="og:image" content="http://yellowcan.top/images/LongSeason.jpg">
+<meta property="article:published_time" content="2023-05-09T14:49:30.000Z">
+<meta property="article:modified_time" content="2023-05-09T14:52:24.807Z">
 <meta property="article:author" content="黄罐头">
-<meta property="article:tag" content="typescript">
+<meta property="article:tag" content="漫长的季节">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://yellowcan.top/images/infer.png">
+<meta name="twitter:image" content="http://yellowcan.top/images/LongSeason.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>TS-infer关键字 - 黄罐头的博客</title>
+  <title>漫长的 - 黄罐头的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="TS-infer关键字"></span>
+            <span id="subtitle" data-typed-text="漫长的"></span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-13 22:30" pubdate>
-          2023年4月13日 晚上
+        <time datetime="2023-05-09 22:49" pubdate>
+          2023年5月9日 晚上
         </time>
       </span>
     
@@ -231,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          492 字
+          158 字
         
       </span>
     
@@ -242,7 +242,7 @@
         
         
         
-          5 分钟
+          2 分钟
         
       </span>
     
@@ -280,37 +280,27 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">TS-infer关键字</h1>
+            <h1 style="display: none">漫长的</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="infer"><a href="#infer" class="headerlink" title="infer"></a>infer</h2><p>在条件类型中申明泛型，使用infer关键字</p>
-<p>有以下两个限制：</p>
-<ol>
-<li>只能在条件类型的extends子句中使用</li>
-<li>infer得到的类型只能在true语句中使用</li>
-</ol>
-<p>申明一个条件类型Element，获取数组中元素的类型：</p>
-<pre class=" language-typescript"><code class="language-typescript">type ElementType<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token class-name">unknown</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">?</span> T<span class="token punctuation">[</span><span class="token keyword">number</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> T
-type A <span class="token operator">=</span> ElementType<span class="token operator">&lt;</span><span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> <span class="token comment" spellcheck="true">// number</span>
-</code></pre>
-<p>使用infer关键字重写：</p>
-<pre class=" language-typescript"><code class="language-typescript">type ElementType2<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token punctuation">(</span>infer U<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">?</span> U <span class="token punctuation">:</span> T
-type B <span class="token operator">=</span> ElementType2<span class="token operator">&lt;</span><span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> <span class="token comment" spellcheck="true">// number</span>
-</code></pre>
-<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><pre class=" language-typescript"><code class="language-typescript">type Replace<span class="token operator">&lt;</span>
-  S <span class="token keyword">extends</span> <span class="token class-name">string</span><span class="token punctuation">,</span>
-  From <span class="token keyword">extends</span> <span class="token class-name">string</span><span class="token punctuation">,</span>
-  To <span class="token keyword">extends</span> <span class="token class-name">string</span>
-<span class="token operator">></span> <span class="token operator">=</span> From <span class="token keyword">extends</span> <span class="token string">''</span>
-  <span class="token operator">?</span> S
-  <span class="token punctuation">:</span> S <span class="token keyword">extends</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>infer A<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>From<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>infer B<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
-  <span class="token operator">?</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>A<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>To<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>B<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
-  <span class="token punctuation">:</span> S<span class="token punctuation">;</span>
-</code></pre>
-<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><pre class=" language-typescript"><code class="language-typescript">type Pop<span class="token operator">&lt;</span>T <span class="token keyword">extends</span> <span class="token class-name">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> <span class="token operator">=</span> T <span class="token keyword">extends</span> <span class="token punctuation">[</span><span class="token operator">...</span>infer I<span class="token punctuation">,</span> infer _<span class="token punctuation">]</span> <span class="token operator">?</span> I <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
+                <p><em><strong>打个响指吧，他说</strong></em></p>
+<p><em><strong>我们打个共鸣的响指</strong></em></p>
+<p><em><strong>遥远的事物将被震碎</strong></em></p>
+<p><em><strong>面前的人们此时尚不知情</strong></em></p>
+<p><em><strong>吹个口哨吧，我说</strong></em></p>
+<p><em><strong>你来吹个斜斜的口哨</strong></em></p>
+<p><em><strong>像一块铁然后是一枚针</strong></em></p>
+<p><em><strong>磁极的弧线拂过绿玻璃</strong></em></p>
+<p><em><strong>喝一杯水吧，也看一看河</strong></em></p>
+<p><em><strong>在平静时平静，不平静时</strong></em></p>
+<p><em><strong>我们就错过了一层台阶</strong></em></p>
+<p><em><strong>一小颗眼泪滴在石头上</strong></em></p>
+<p><em><strong>很长时间也不会干涸</strong></em></p>
+<p><em><strong>整个季节将它结成了琥珀</strong></em></p>
+<p><em><strong>块状的流淌，具体的光芒</strong></em></p>
+<p><em><strong>在它身后是些遥远的事物</strong></em></p>
 
                 
               </div>
@@ -329,7 +319,7 @@ type B <span class="token operator">=</span> ElementType2<span class="token oper
     
       <span class="category-chain">
         
-  <a href="/categories/web/" class="category-chain-item">web</a>
+  <a href="/categories/%E6%BC%AB%E9%95%BF%E7%9A%84%E5%AD%A3%E8%8A%82/" class="category-chain-item">漫长的季节</a>
   
   
 
@@ -344,7 +334,7 @@ type B <span class="token operator">=</span> ElementType2<span class="token oper
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/typescript/">#typescript</a>
+        <a href="/tags/%E6%BC%AB%E9%95%BF%E7%9A%84%E5%AD%A3%E8%8A%82/">#漫长的季节</a>
       
     </div>
   
@@ -356,8 +346,8 @@ type B <span class="token operator">=</span> ElementType2<span class="token oper
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>TS-infer关键字</div>
-      <div>http://yellowcan.top/2023/04/13/ts-infer/</div>
+      <div>漫长的</div>
+      <div>http://yellowcan.top/2023/05/09/man-chang-de/</div>
     </div>
     <div class="license-meta">
       
@@ -369,7 +359,7 @@ type B <span class="token operator">=</span> ElementType2<span class="token oper
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年4月13日</div>
+          <div>2023年5月9日</div>
         </div>
       
       
@@ -401,18 +391,12 @@ type B <span class="token operator">=</span> ElementType2<span class="token oper
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/04/20/shou-xie-webpack-markdown-loader/" title="手写webpack markdown-loader">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">手写webpack markdown-loader</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/28/react-sang-ji-tu/" title="React-桑基图">
-                        <span class="hidden-mobile">React-桑基图</span>
+                      <a href="/2023/05/07/react18-xin-te-xing/" title="React18新特性">
+                        <span class="hidden-mobile">React18新特性</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
