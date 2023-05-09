@@ -38,7 +38,7 @@
     
     <categories>
       
-      <category>web</category>
+      <category>vercel</category>
       
     </categories>
     
@@ -198,6 +198,31 @@
     <tags>
       
       <tag>typescript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>伪类和伪元素</title>
+    <link href="/2021/10/09/wei-lei-he-wei-yuan-su/"/>
+    <url>/2021/10/09/wei-lei-he-wei-yuan-su/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>css</tag>
       
     </tags>
     
