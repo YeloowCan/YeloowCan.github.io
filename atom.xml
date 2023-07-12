@@ -6,7 +6,7 @@
   <link href="http://yellowcan.top/atom.xml" rel="self"/>
   
   <link href="http://yellowcan.top/"/>
-  <updated>2023-05-09T14:52:24.807Z</updated>
+  <updated>2023-07-12T14:31:28.833Z</updated>
   <id>http://yellowcan.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react-router v6</title>
+    <link href="http://yellowcan.top/2023/07/12/react-router-v6/"/>
+    <id>http://yellowcan.top/2023/07/12/react-router-v6/</id>
+    <published>2023-07-12T14:12:41.000Z</published>
+    <updated>2023-07-12T14:31:28.833Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;React-Router-v6-对比于v5的变化&quot;&gt;&lt;a href=&quot;#React-Router-v6-对比于v5的变化&quot; class=&quot;headerlink&quot; title=&quot;React-Router v6 对比于v5的变化&quot;&gt;&lt;/a&gt;React-Router</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://yellowcan.top/categories/web/"/>
+    
+    
+    <category term="react" scheme="http://yellowcan.top/tags/react/"/>
+    
+  </entry>
   
   <entry>
     <title>漫长的</title>
