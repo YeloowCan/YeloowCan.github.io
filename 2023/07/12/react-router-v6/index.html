@@ -16,16 +16,16 @@
   <meta name="author" content="黄罐头">
   <meta name="keywords" content="">
   
-    <meta name="description" content="React-Router v6 对比于v5的变化1. Switch &#x3D;&gt; Routes&#x2F;&#x2F; v5 &lt;Switch&gt;     &lt;Route exact path&#x3D;&quot;&#x2F;&quot;&gt;&lt;Home &#x2F;&gt;&lt;&#x2F;Route&gt;     &lt;Route path&#x3D;&quot;&#x2F;profile&quot;&gt;&lt;Profile &#x2F;&gt;&lt;&#x2F;Route&gt; &lt;&#x2F;Switch&gt;  &#x2F;&#x2F; v6 &lt;Rout">
+    <meta name="description" content="createBrowserRouter推荐使用的路由器，使用Dom History API import React from &#39;react&#39;; import ReactDOM from &#39;react-dom&#x2F;client&#39;; import App from &#39;.&#x2F;App&#39;; import { createBrowserRouter, RouterProvider } from &#39;react-ro">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react-router v6">
 <meta property="og:url" content="http://yellowcan.top/2023/07/12/react-router-v6/index.html">
 <meta property="og:site_name" content="黄罐头的博客">
-<meta property="og:description" content="React-Router v6 对比于v5的变化1. Switch &#x3D;&gt; Routes&#x2F;&#x2F; v5 &lt;Switch&gt;     &lt;Route exact path&#x3D;&quot;&#x2F;&quot;&gt;&lt;Home &#x2F;&gt;&lt;&#x2F;Route&gt;     &lt;Route path&#x3D;&quot;&#x2F;profile&quot;&gt;&lt;Profile &#x2F;&gt;&lt;&#x2F;Route&gt; &lt;&#x2F;Switch&gt;  &#x2F;&#x2F; v6 &lt;Rout">
+<meta property="og:description" content="createBrowserRouter推荐使用的路由器，使用Dom History API import React from &#39;react&#39;; import ReactDOM from &#39;react-dom&#x2F;client&#39;; import App from &#39;.&#x2F;App&#39;; import { createBrowserRouter, RouterProvider } from &#39;react-ro">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yellowcan.top/images/router.webp">
 <meta property="article:published_time" content="2023-07-12T14:12:41.000Z">
-<meta property="article:modified_time" content="2023-07-12T14:41:36.458Z">
+<meta property="article:modified_time" content="2023-07-13T14:31:26.750Z">
 <meta property="article:author" content="黄罐头">
 <meta property="article:tag" content="react">
 <meta name="twitter:card" content="summary_large_image">
@@ -231,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          3.1k 字
         
       </span>
     
@@ -242,7 +242,7 @@
         
         
         
-          20 分钟
+          27 分钟
         
       </span>
     
@@ -285,7 +285,60 @@
             
               <div class="markdown-body">
                 
-                <h2 id="React-Router-v6-对比于v5的变化"><a href="#React-Router-v6-对比于v5的变化" class="headerlink" title="React-Router v6 对比于v5的变化"></a>React-Router v6 对比于v5的变化</h2><h3 id="1-Switch-gt-Routes"><a href="#1-Switch-gt-Routes" class="headerlink" title="1. Switch => Routes"></a>1. Switch =&gt; Routes</h3><pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// v5</span>
+                <h2 id="createBrowserRouter"><a href="#createBrowserRouter" class="headerlink" title="createBrowserRouter"></a>createBrowserRouter</h2><p>推荐使用的路由器，使用<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/History">Dom History API</a></p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom/client'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createBrowserRouter<span class="token punctuation">,</span> RouterProvider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createBrowserRouter</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+    element<span class="token punctuation">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> HTMLElement
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RouterProvider</span> <span class="token attr-name">router</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>router<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="Outlet"><a href="#Outlet" class="headerlink" title="Outlet"></a>Outlet</h2><p>一个<outlet>应该被用在父路由元素中来渲染他们的子路由元素。这允许在渲染子路由时显示嵌套UI。如果父路由完全匹配，它将渲染一个子索引路由，如果没有索引路由，则不渲染。</outlet></p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// RouterObject</span>
+<span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/dog'</span><span class="token punctuation">,</span>
+    element<span class="token punctuation">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Dog</span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span>
+    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'husky'</span><span class="token punctuation">,</span>
+        element<span class="token punctuation">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Husky</span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+<span class="token comment" spellcheck="true">// Dog.tsx</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Outlet <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+      Dog
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Outlet</span> <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+   
+<span class="token comment" spellcheck="true">// Husky.tsx</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Husky</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Husky<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="React-Router-v6-对比于v5的变化"><a href="#React-Router-v6-对比于v5的变化" class="headerlink" title="React-Router v6 对比于v5的变化"></a>React-Router v6 对比于v5的变化</h2><h3 id="1-Switch-gt-Routes"><a href="#1-Switch-gt-Routes" class="headerlink" title="1. Switch => Routes"></a>1. Switch =&gt; Routes</h3><pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// v5</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Switch</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">exact</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Home</span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Route</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Route</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/profile<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Profile</span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Route</span><span class="token punctuation">></span></span>
